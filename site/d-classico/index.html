@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>João Signor · Palestras e workshops de IA aplicada para empresas · Toledo – PR</title>
+  <meta name="description" content="Palestras, workshops práticos e implementação de inteligência artificial para empresas de Toledo e do oeste do Paraná, com João Signor, desenvolvedor que produz com IA todos os dias.">
+  <meta name="theme-color" content="#2440d6">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="João Signor · IA aplicada para a sua empresa">
+  <meta property="og:description" content="Palestras e workshops de IA com demonstração ao vivo e um plano para a segunda-feira. Toledo e região oeste do Paraná.">
+  <meta property="og:image" content="img/genie-740.webp">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232440d6'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='28' fill='white' text-anchor='middle'%3EJS%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+      document.documentElement.classList.add('js-motion');
+    }
+  </script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+      <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+      <symbol id="i-yt" viewBox="0 0 24 24"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></symbol>
+      <symbol id="i-game" viewBox="0 0 24 24"><line x1="6" x2="10" y1="11" y2="11"/><line x1="8" x2="8" y1="9" y2="13"/><line x1="15" x2="15.01" y1="12" y2="12"/><line x1="18" x2="18.01" y1="10" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></symbol>
+      <symbol id="i-clap" viewBox="0 0 24 24"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z"/><path d="m6.2 5.3 3.1 3.9"/><path d="m12.4 3.4 3.1 4"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" id="topo">
+    <div class="wrap header-row">
+      <a class="brand" href="#topo" aria-label="João Signor, início">
+        <span class="brand-mark" aria-hidden="true">JS</span>
+        <span class="brand-name">João Signor</span>
+      </a>
+      <nav class="nav" aria-label="Seções">
+        <a href="#genie">Como eu trabalho</a>
+        <a href="#formatos">Formatos</a>
+        <a href="#palestra">A palestra</a>
+        <a href="#perguntas">Perguntas</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="https://wa.me/5545920005653?text=Ol%C3%A1%2C%20Jo%C3%A3o%21%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20IA%20na%20minha%20empresa." target="_blank" rel="noopener">
+        <svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">Inteligência artificial que o seu time usa na segunda-feira.</h1>
+          <p class="lead">Sou <strong>João Signor</strong>, desenvolvedor em <span class="nowrap">Toledo – PR</span>. Com IA, faço sozinho o trabalho de uma pequena equipe: canal no YouTube, jogos lançados na Steam e um aplicativo que produz vídeos do roteiro à thumbnail. Levo esse método para empresas em palestras, workshops e projetos sob medida.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="https://wa.me/5545920005653?text=Ol%C3%A1%2C%20Jo%C3%A3o%21%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20IA%20na%20minha%20empresa." target="_blank" rel="noopener">
+              <svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>
+              <span>Conversar no WhatsApp</span>
+            </a>
+            <a class="btn btn-quiet btn-lg" href="#formatos">
+              <span>Ver formatos</span>
+              <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+          <ul class="proof-line" aria-label="Trabalho publicado">
+            <li><svg class="i" aria-hidden="true"><use href="#i-yt"/></svg><span><strong>25,5 mil</strong> inscritos no YouTube</span></li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-game"/></svg><span><strong>2 jogos</strong> na Steam</span></li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-clap"/></svg><span><strong>Genie</strong>, app próprio de vídeo</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <!-- TROCAR: foto do João (assets/joao.jpg) — basta salvar a foto em site/assets/joao.jpg (retrato, ~900x1125) que ela substitui o monograma automaticamente. -->
+          <figure class="portrait">
+            <div class="portrait-placeholder" aria-hidden="true">
+              <span class="monogram">JS</span>
+            </div>
+            <img class="portrait-photo" src="../assets/joao.jpg" alt="João Signor" width="900" height="1125" onerror="this.remove()">
+            <figcaption class="portrait-tag">
+              <svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>
+              Toledo · oeste do Paraná
+            </figcaption>
+          </figure>
+          <figure class="phone phone-hero">
+            <img src="img/genie-420.webp" srcset="img/genie-420.webp 420w, img/genie-740.webp 740w" sizes="(min-width: 960px) 230px, 40vw" width="420" height="908" alt="Tela real do Genie no iPhone: vídeo “9 Hábitos do Dia a Dia que Magoam o seu Pug”, com a thumbnail gerada e as etapas Planejamento, Roteiro, Narração e Thumbnail." fetchpriority="high">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMESSA -->
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="wrap intro-grid">
+        <h2 id="intro-title">Nada de palestra motivacional sobre o futuro. Você vê a IA trabalhando, na sua frente, em tarefas parecidas com as da sua empresa.</h2>
+        <div class="intro-body">
+          <p>A maioria das empresas já testou um chatbot e não viu diferença no fim do mês. O problema raramente é a ferramenta: falta saber <em>onde</em> ela entra no processo, quem confere o resultado e o que nunca deve sair de dentro de casa.</p>
+          <p>É isso que eu trago. Não sou consultor de slide: publico o que faço com IA, com números abertos, e é desse trabalho que saem os exemplos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GENIE (assinatura) -->
+    <section class="band band-brand genie" id="genie" aria-labelledby="genie-title">
+      <div class="wrap genie-grid">
+        <figure class="phone phone-genie">
+          <img src="img/genie-740.webp" srcset="img/genie-420.webp 420w, img/genie-740.webp 740w" sizes="(min-width: 960px) 320px, 70vw" width="740" height="1600" loading="lazy" decoding="async" alt="Genie aberto no iPhone, conectado ao Mac, mostrando o vídeo do canal Código Pug na etapa de Ideia e planejamento.">
+          <figcaption>Print real do Genie, sem retoque.</figcaption>
+        </figure>
+
+        <div class="genie-copy">
+          <h2 id="genie-title">Uma pessoa, uma linha de produção inteira.</h2>
+          <p class="genie-lead">O Genie é o aplicativo que eu construí com IA para produzir vídeos de YouTube de ponta a ponta. Cada etapa tem uma tarefa clara, e a decisão importante continua com uma pessoa.</p>
+
+          <ol class="pipeline" data-pipeline>
+            <li class="step"><span class="step-dot" aria-hidden="true"></span><div><h3>Ideia e referência</h3><p>Um tema ou um vídeo que funcionou serve de ponto de partida.</p></div></li>
+            <li class="step"><span class="step-dot" aria-hidden="true"></span><div><h3>Planejamento</h3><p>A IA analisa a referência e propõe direção, título e conceito da thumbnail. A pessoa escolhe.</p></div></li>
+            <li class="step"><span class="step-dot" aria-hidden="true"></span><div><h3>Roteiro</h3><p>O texto completo do vídeo, no tom do canal.</p></div></li>
+            <li class="step"><span class="step-dot" aria-hidden="true"></span><div><h3>Narração</h3><p>O roteiro vira áudio pronto para a edição.</p></div></li>
+            <li class="step"><span class="step-dot" aria-hidden="true"></span><div><h3>Thumbnail</h3><p>Imagem e chamada, como o “ISSO MAGOA ELES” da tela ao lado.</p></div></li>
+            <li class="step"><span class="step-dot" aria-hidden="true"></span><div><h3>Vídeo final</h3><p>Montado em 16:9 e pronto para publicar.</p></div></li>
+            <li class="step step-last"><span class="step-dot" aria-hidden="true"></span><div><h3>Ebook e página de vendas</h3><p>O mesmo conteúdo vira produto. Foi assim que nasceu o Código Pug.</p></div></li>
+          </ol>
+
+          <p class="genie-moral">Na sua empresa a lógica é a mesma: quebrar um processo em etapas, deixar a parte repetitiva com a IA e as decisões com quem entende do negócio.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓDIGO PUG -->
+    <section class="section pug" aria-labelledby="pug-title">
+      <div class="wrap pug-grid">
+        <div class="pug-copy">
+          <h2 id="pug-title">Do vídeo ao produto à venda: Código Pug.</h2>
+          <p>Código Pug é um canal sobre cuidados com pugs produzido com o Genie. O conteúdo virou o ebook <em>“Código Pug: O Manual da Longevidade e Rotina Prática”</em>, com 6 capítulos, ilustrações e uma página de vendas no ar, vendido a R$&nbsp;27,90 pela Kiwify.</p>
+          <p>Para uma empresa, o ponto não é o pug. É ver um ciclo completo, da ideia ao produto à venda, montado por uma pessoa só, em vez de um projeto de meses com cinco fornecedores.</p>
+          <a class="text-link" href="https://codigopug.pages.dev/" target="_blank" rel="noopener">Abrir o site do Código Pug <svg class="i" aria-hidden="true"><use href="#i-out"/></svg></a>
+        </div>
+        <div class="pug-visual">
+          <figure class="browser">
+            <div class="browser-bar" aria-hidden="true">
+              <span class="dots"><i></i><i></i><i></i></span>
+              <span class="url">codigopug.pages.dev</span>
+            </div>
+            <img src="img/codigopug-site-1200.webp" width="1200" height="758" loading="lazy" decoding="async" alt="Página de vendas do Código Pug: título “Seu pug vivendo mais, com rotinas serenas”, botão de compra e preço de R$ 27,90.">
+          </figure>
+          <img class="pug-page" src="img/codigopug-pagina-1-480.webp" width="480" height="720" loading="lazy" decoding="async" alt="Página real do ebook Código Pug: abertura do Capítulo 1, “A Anatomia Única e Cuidados Essenciais”, com ilustração de um pug.">
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTRAS PROVAS -->
+    <section class="section section-mist proof" aria-labelledby="proof-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="proof-title">Tudo em público, com número aberto.</h2>
+          <p>Antes de falar de IA para a sua equipe, eu uso IA para colocar coisas no mundo. Dá para conferir cada uma.</p>
+        </div>
+
+        <div class="proof-grid">
+          <article class="proof-yt">
+            <header class="proof-yt-head">
+              <h3><svg class="i" aria-hidden="true"><use href="#i-yt"/></svg> Canal “ignore não existe mais”</h3>
+              <dl class="stats">
+                <div><dt>inscritos</dt><dd>25,5 mil</dd></div>
+                <div><dt>vídeos</dt><dd>355</dd></div>
+                <div><dt>visualizações</dt><dd>879 mil</dd></div>
+              </dl>
+              <p>Onde eu “vibecodo”: construo jogos, ferramentas e experimentos com IA em vídeo, mostrando o que deu certo e o que deu errado.</p>
+            </header>
+            <ul class="videos">
+              <li>
+                <a href="https://www.youtube.com/watch?v=J4-Dn6Sk2mA" target="_blank" rel="noopener">
+                  <img src="img/yt-J4-Dn6Sk2mA-640.webp" width="640" height="360" loading="lazy" decoding="async" alt="">
+                  <span>Criei um jogo em 7 dias e lancei ele na Steam</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/watch?v=2y6O5zvo8UU" target="_blank" rel="noopener">
+                  <img src="img/yt-2y6O5zvo8UU-640.webp" width="640" height="360" loading="lazy" decoding="async" alt="">
+                  <span>Meu jogo feito em 7 dias deu lucro? Mostrando os números da Steam</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/watch?v=GFMhkQLhAXg" target="_blank" rel="noopener">
+                  <img src="img/yt-GFMhkQLhAXg-640.webp" width="640" height="360" loading="lazy" decoding="async" alt="">
+                  <span>Transformei vídeos virais em anúncios do meu jogo com IA</span>
+                </a>
+              </li>
+            </ul>
+            <a class="text-link" href="https://www.youtube.com/@ignorenaoexiste" target="_blank" rel="noopener">Ver o canal no YouTube <svg class="i" aria-hidden="true"><use href="#i-out"/></svg></a>
+          </article>
+
+          <article class="proof-steam">
+            <h3><svg class="i" aria-hidden="true"><use href="#i-game"/></svg> LobotoMax, estúdio de jogos</h3>
+            <p>Meu estúdio independente. Jogos publicados na Steam, a maior loja de jogos para PC.</p>
+            <ul class="games">
+              <li>
+                <a href="https://store.steampowered.com/app/4910220/Incremental_Vampire/" target="_blank" rel="noopener">
+                  <img src="../assets/steam/4910220_header.jpg" width="460" height="215" loading="lazy" decoding="async" alt="Incremental Vampire">
+                  <span class="game-meta"><strong>Incremental Vampire</strong><span>Lançado em 23 de julho de 2026</span></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://store.steampowered.com/app/5432230/Burnout_Runs_Demo/" target="_blank" rel="noopener">
+                  <img src="../assets/steam/5432230_header.jpg" width="460" height="215" loading="lazy" decoding="async" alt="Burnout Runs">
+                  <span class="game-meta"><strong>Burnout Runs</strong><span>Demo publicada em 20 de outubro de 2026</span></span>
+                </a>
+              </li>
+            </ul>
+            <a class="text-link" href="https://store.steampowered.com/curator/46188356" target="_blank" rel="noopener">Página da LobotoMax na Steam <svg class="i" aria-hidden="true"><use href="#i-out"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMATOS -->
+    <section class="section formats" id="formatos" aria-labelledby="formatos-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="formatos-title">Quatro formatos, do primeiro contato ao processo rodando.</h2>
+          <p>Dá para começar por qualquer um. O valor depende do formato, da duração e do local, e eu passo a proposta pelo WhatsApp depois de entender a sua situação.</p>
+        </div>
+
+        <ol class="ladder">
+          <li class="rung">
+            <div class="rung-meta"><span class="rung-time">60 a 90 min</span><span>Na empresa ou em evento</span></div>
+            <div class="rung-body">
+              <h3>Palestra</h3>
+              <p>Para alinhar a liderança ou abrir um evento. Demonstração ao vivo, exemplos do setor da plateia e uma conversa franca sobre riscos.</p>
+            </div>
+            <p class="rung-out"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span>Sua equipe sai sabendo onde a IA cabe no negócio e por onde começar.</span></p>
+            <a class="rung-cta" href="https://wa.me/5545920005653?text=Ol%C3%A1%2C%20Jo%C3%A3o%21%20Quero%20saber%20sobre%20uma%20palestra%20de%20IA%20para%20a%20minha%20empresa%20ou%20evento." target="_blank" rel="noopener">Pedir proposta <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="rung">
+            <div class="rung-meta"><span class="rung-time">3 a 4 horas</span><span>Mão na massa, em grupo</span></div>
+            <div class="rung-body">
+              <h3>Workshop prático</h3>
+              <p>Cada pessoa trabalha com as próprias tarefas: um e-mail difícil, uma proposta, um post, uma planilha. A gente monta junto os comandos e confere o resultado.</p>
+            </div>
+            <p class="rung-out"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span>O time sai usando IA no trabalho real, com modelos prontos para repetir.</span></p>
+            <a class="rung-cta" href="https://wa.me/5545920005653?text=Ol%C3%A1%2C%20Jo%C3%A3o%21%20Tenho%20interesse%20no%20workshop%20pr%C3%A1tico%20de%20IA%20para%20o%20meu%20time." target="_blank" rel="noopener">Pedir proposta <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="rung">
+            <div class="rung-meta"><span class="rung-time">Projeto</span><span>Um processo por vez</span></div>
+            <div class="rung-body">
+              <h3>Diagnóstico e implementação</h3>
+              <p>Escolhemos um processo que toma tempo demais, como responder orçamentos, organizar atendimento ou produzir conteúdo, e eu automatizo com IA dentro da rotina que já existe.</p>
+            </div>
+            <p class="rung-out"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span>Um processo real funcionando, documentado e entregue para a equipe.</span></p>
+            <a class="rung-cta" href="https://wa.me/5545920005653?text=Ol%C3%A1%2C%20Jo%C3%A3o%21%20Quero%20conversar%20sobre%20um%20diagn%C3%B3stico%20para%20automatizar%20um%20processo%20da%20minha%20empresa%20com%20IA." target="_blank" rel="noopener">Falar de um processo <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="rung">
+            <div class="rung-meta"><span class="rung-time">Mensal</span><span>Encontros recorrentes</span></div>
+            <div class="rung-body">
+              <h3>Mentoria e acompanhamento</h3>
+              <p>Para quem já começou e quer ritmo: revisamos o que a equipe está usando, ajustamos o que não rendeu e escolhemos o próximo passo.</p>
+            </div>
+            <p class="rung-out"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span>A IA vira hábito da empresa, e não um entusiasmo de uma semana.</span></p>
+            <a class="rung-cta" href="https://wa.me/5545920005653?text=Ol%C3%A1%2C%20Jo%C3%A3o%21%20Quero%20entender%20como%20funciona%20o%20acompanhamento%20mensal%20de%20IA." target="_blank" rel="noopener">Saber como funciona <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- COMO É A PALESTRA -->
+    <section class="section section-mist talk" id="palestra" aria-labelledby="palestra-title">
+      <div class="wrap talk-grid">
+        <div class="talk-copy">
+          <h2 id="palestra-title">Como é uma palestra, do começo ao fim.</h2>
+          <p class="talk-lead">O roteiro muda conforme o público, mas a estrutura é sempre esta. Ninguém precisa saber programar.</p>
+          <ol class="timeline">
+            <li><span class="tl-time">Primeiros minutos</span><div><h3>Demonstração ao vivo</h3><p>Antes de qualquer conceito, a plateia vê a IA fazendo um trabalho de verdade no telão, como o Genie produzindo um vídeo.</p></div></li>
+            <li><span class="tl-time">Miolo</span><div><h3>Casos do seu setor</h3><p>Exemplos montados para quem está na sala: comércio, indústria, agro, serviços, saúde. Atendimento, vendas, marketing e rotina administrativa.</p></div></li>
+            <li><span class="tl-time">Antes do fim</span><div><h3>Uso responsável</h3><p>LGPD, dados sensíveis de clientes, respostas inventadas pela IA e quando é obrigatório uma pessoa revisar.</p></div></li>
+            <li><span class="tl-time">Encerramento</span><div><h3>Checklist de segunda-feira</h3><p>Uma lista curta do que testar na primeira semana, para a palestra não morrer no auditório.</p></div></li>
+          </ol>
+        </div>
+
+        <aside class="checklist" aria-labelledby="check-title">
+          <h3 id="check-title">Checklist de segunda-feira</h3>
+          <ul>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span>Escolher <strong>uma</strong> tarefa repetitiva do setor e cronometrar quanto tempo ela leva hoje.</span></li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span>Fazer a mesma tarefa com IA, usando o modelo de comando da palestra.</span></li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span>Conferir o resultado com quem entende do assunto antes de enviar ao cliente.</span></li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span>Tirar nomes, CPFs e dados de clientes de tudo o que for colado na ferramenta.</span></li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span>Anotar o tempo novo e decidir: vira rotina, ajusta ou descarta.</span></li>
+          </ul>
+          <p class="checklist-note">Exemplo do material entregue no fim da palestra. A versão real é montada para o setor da plateia.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- TEMAS -->
+    <section class="section themes" aria-labelledby="temas-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="temas-title">Temas que eu levo para o palco.</h2>
+          <p>Os títulos são ponto de partida. A versão final é ajustada ao seu público e ao tempo disponível.</p>
+        </div>
+        <ul class="theme-list">
+          <li>
+            <h3>IA na prática: como uma pessoa faz o trabalho de uma equipe</h3>
+            <p class="theme-for">Para donos, sócios e gestores</p>
+            <p>A história real de um canal, um app e dois jogos feitos com IA, com o Genie rodando ao vivo. O que isso significa para o tamanho, o custo e a velocidade de uma empresa pequena.</p>
+          </li>
+          <li>
+            <h3>Seu time produzindo mais: marketing, vendas e atendimento com IA</h3>
+            <p class="theme-for">Para equipes, com prática</p>
+            <p>Respostas a clientes, propostas, posts e roteiros de venda feitos com IA durante a sessão, a partir de situações que o próprio time traz.</p>
+          </li>
+          <li>
+            <h3>IA sem dor de cabeça: dados, LGPD e respostas inventadas</h3>
+            <p class="theme-for">Para gestores, RH e jurídico</p>
+            <p>O que pode e o que não pode ir para uma ferramenta de IA, como evitar que um erro da máquina chegue ao cliente e que regras simples a empresa deve combinar com o time.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ASSOCIAÇÕES E EVENTOS -->
+    <section class="section events" aria-labelledby="eventos-title">
+      <div class="wrap events-panel">
+        <div class="events-copy">
+          <h2 id="eventos-title">Para associações comerciais e eventos.</h2>
+          <p>Se você monta a agenda de uma ACI, de uma CDL, de um núcleo setorial, de um programa do Sebrae ou de um evento de empresa, a palestra se encaixa no formato que já existe: café empresarial, encontro de núcleo, semana do comércio, convenção interna.</p>
+          <a class="btn btn-primary" href="https://wa.me/5545920005653?text=Ol%C3%A1%2C%20Jo%C3%A3o%21%20Organizo%20um%20evento/associa%C3%A7%C3%A3o%20e%20quero%20falar%20sobre%20uma%20palestra%20de%20IA%20para%20os%20associados." target="_blank" rel="noopener">
+            <svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>
+            <span>Falar sobre o seu evento</span>
+          </a>
+        </div>
+        <ul class="events-list">
+          <li><h3>Conteúdo para quem está na plateia</h3><p>Exemplos escolhidos para o perfil dos associados, do varejo de rua à indústria.</p></li>
+          <li><h3>Texto pronto para a divulgação</h3><p>Título, resumo e minibiografia para o convite, o Instagram e a lista de transmissão.</p></li>
+          <li><h3>Continuidade depois do evento</h3><p>QR code no fim da palestra com o checklist, e a opção de workshop para quem quiser aprofundar.</p></li>
+          <li><h3>Toledo e região oeste do Paraná</h3><p>Atendimento presencial na região; outras cidades sob consulta.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section section-mist about" aria-labelledby="sobre-title">
+      <div class="wrap about-grid">
+        <h2 id="sobre-title">Quem vai estar no palco.</h2>
+        <div class="about-body">
+          <p>Sou o João Signor, desenvolvedor de Toledo, no oeste do Paraná. Desde 2015 mantenho o canal <a href="https://www.youtube.com/@ignorenaoexiste" target="_blank" rel="noopener">ignore não existe mais</a>, onde construo coisas com IA na frente da câmera. Pelo meu estúdio, a <a href="https://store.steampowered.com/curator/46188356" target="_blank" rel="noopener">LobotoMax</a>, lancei jogos na Steam, um deles feito em sete dias. E criei o Genie, que produz vídeos do planejamento à thumbnail.</p>
+          <p>Não vendo a IA como mágica, e não tenho medo de mostrar onde ela erra. Meu trabalho com empresas é o mesmo que faço nos meus projetos: escolher a tarefa certa, montar o processo e medir se valeu a pena.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="perguntas" aria-labelledby="faq-title">
+      <div class="wrap faq-grid">
+        <div class="faq-head">
+          <h2 id="faq-title">Perguntas frequentes.</h2>
+          <p>Não achou a sua? Mande no <a href="https://wa.me/5545920005653?text=Ol%C3%A1%2C%20Jo%C3%A3o%21%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20IA%20na%20minha%20empresa." target="_blank" rel="noopener">WhatsApp</a>.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Minha equipe não entende nada de tecnologia. Funciona?<svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Funciona, e é para esse público que a palestra é pensada. Tudo é mostrado em ferramentas que se usam digitando em português, como uma conversa. Ninguém precisa programar.</p>
+          </details>
+          <details>
+            <summary>Quanto custa?<svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Depende do formato, da duração, do número de pessoas e do local. Me conte pelo WhatsApp o que você tem em mente e eu envio uma proposta fechada, sem surpresa depois.</p>
+          </details>
+          <details>
+            <summary>Quais ferramentas de IA entram na palestra?<svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>As que fizerem sentido para a sua empresa, de preferência as que o time já tem acesso ou que têm versão gratuita. O foco é o método, que continua valendo quando a ferramenta muda.</p>
+          </details>
+          <details>
+            <summary>E os dados dos meus clientes? Como fica a LGPD?<svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>É um dos blocos fixos de todo formato. Mostro o que nunca deve ir para uma ferramenta de IA, como anonimizar informações e quando uma pessoa precisa revisar o resultado antes de ele chegar ao cliente.</p>
+          </details>
+          <details>
+            <summary>Dá para adaptar ao meu setor?<svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Dá, e é o que eu faço. Antes da data, conversamos sobre o público, as tarefas do dia a dia e o que a empresa quer resolver. Os exemplos são montados a partir disso.</p>
+          </details>
+          <details>
+            <summary>O que preciso providenciar?<svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Para a palestra, um telão ou TV com entrada HDMI e internet. Para o workshop, também é bom que cada participante tenha um notebook ou, no mínimo, o celular.</p>
+          </details>
+          <details>
+            <summary>Você atende fora de Toledo?<svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Atendo presencialmente Toledo e a região oeste do Paraná. Para outras cidades, me chame e combinamos o deslocamento.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="band band-brand closing" aria-labelledby="cta-title">
+      <div class="wrap closing-inner">
+        <h2 id="cta-title">Vamos ver onde a IA cabe na sua empresa?</h2>
+        <p>Uma conversa rápida pelo WhatsApp: você conta o tamanho do time e o que quer resolver, e eu digo qual formato faz sentido. Se nenhum fizer, eu também digo.</p>
+        <div class="closing-actions">
+          <a class="btn btn-invert btn-lg" href="https://wa.me/5545920005653?text=Ol%C3%A1%2C%20Jo%C3%A3o%21%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20IA%20na%20minha%20empresa." target="_blank" rel="noopener">
+            <svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>
+            <span>Chamar no WhatsApp</span>
+          </a>
+          <span class="closing-number">+55 45 92000-5653</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <div class="footer-id">
+        <span class="brand-name">João Signor</span>
+        <span>Palestras, workshops e implementação de IA aplicada</span>
+      </div>
+      <ul class="footer-contact">
+        <li><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Toledo – PR</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg><a href="https://wa.me/5545920005653?text=Ol%C3%A1%2C%20Jo%C3%A3o%21%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20IA%20na%20minha%20empresa." target="_blank" rel="noopener">+55 45 92000-5653</a></li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:joaogks10@gmail.com">joaogks10@gmail.com</a></li>
+      </ul>
+      <ul class="footer-links">
+        <li><a href="https://www.youtube.com/@ignorenaoexiste" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://store.steampowered.com/curator/46188356" target="_blank" rel="noopener">LobotoMax na Steam</a></li>
+        <li><a href="https://codigopug.pages.dev/" target="_blank" rel="noopener">Código Pug</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

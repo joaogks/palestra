@@ -1,5 +1,6 @@
 .hermes/
 .impeccable/review/
+.impeccable/tmp/
 .impeccable/config.local.json
 node_modules/
 *.log
