@@ -4,3 +4,4 @@
 .impeccable/config.local.json
 node_modules/
 *.log
+.wrangler/
